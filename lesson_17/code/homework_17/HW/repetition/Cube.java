@@ -21,7 +21,7 @@ public class Cube {
         while ( x <= number){                      // Пока x меньше или равно n
             int res = x * x * x;                   // Вычисляем куб
             System.out.println(  x + " ^ 3  = "  + res);
-            x++;                                   // Увеличиваем i на 1
+            x++;                                   // Увеличиваем x на 1
 
         } // end of while
     } // end of main
