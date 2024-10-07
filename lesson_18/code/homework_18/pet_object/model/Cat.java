@@ -53,4 +53,4 @@ public class Cat  extends Pet{
     public void petVoice(){
         System.out.println( getName() + " сказала: Мяу!");
     }
-}
+} // end of class
