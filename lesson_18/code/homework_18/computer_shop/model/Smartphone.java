@@ -1,4 +1,4 @@
-package homework_18.computr_shop.model;
+package homework_18.computer_shop.model;
 
 // создать класс Smartphone, расширяющий класс Laptop с полем private long imei. В классе Smartphone переопределить метод toString. В методе main добавить объект Smartphone, и распечатать его в консоль.
 

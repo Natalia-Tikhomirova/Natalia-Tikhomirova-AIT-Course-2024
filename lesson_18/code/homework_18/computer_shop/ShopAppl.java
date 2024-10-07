@@ -1,12 +1,12 @@
-package homework_18.computr_shop;
+package homework_18.computer_shop;
 
 //  Создать несколько экземпляров каждого класса.
 // Какой общий объем памяти у всех устройств на складе?
 // Какова общая стоимость всех устройств на складе?
 
-import homework_18.computr_shop.model.Computer;
-import homework_18.computr_shop.model.Laptop;
-import homework_18.computr_shop.model.Smartphone;
+import homework_18.computer_shop.model.Computer;
+import homework_18.computer_shop.model.Laptop;
+import homework_18.computer_shop.model.Smartphone;
 
 public class ShopAppl {
 

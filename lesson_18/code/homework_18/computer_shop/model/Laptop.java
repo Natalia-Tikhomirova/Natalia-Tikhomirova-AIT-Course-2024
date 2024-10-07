@@ -1,4 +1,4 @@
-package homework_18.computr_shop.model;
+package homework_18.computer_shop.model;
 
 public class Laptop extends Computer {
 
