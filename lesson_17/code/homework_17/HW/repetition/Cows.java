@@ -17,7 +17,7 @@ public class Cows {
         int n = scanner.nextInt();
 
         // Определяем правильное склонение слова "корова":
-        String result;
+        java.lang.String result;
         if(n == 1){
             result = n + " корова";                         // "1 корова"
         } else if (n >=2 && n <=4) {
