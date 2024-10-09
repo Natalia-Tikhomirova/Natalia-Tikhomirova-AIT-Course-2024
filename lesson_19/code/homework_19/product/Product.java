@@ -1,4 +1,4 @@
-package homework_19.model;
+package homework_19.product;
 
 // В Задаче 1 переопределить метод equals для сравнения объектов во всех классах.
 
@@ -61,4 +61,18 @@ public class Product {
     public int hashCode() {
         return Objects.hash(price, name, barCode);
     }
+
+    // Метод для поиска продукта по бар-коду
+    public static Product findProductByBarCode(Product[]products, long barCode){
+        for (int i = 0; i < products.length; i++) {
+            if(products[i].getBarCode() == barCode){
+                return products[i];  // Возвращаем продукт, если бар-код совпадает
+            }
+        } // end of for
+
+        return null;                                          // Возвращаем null, если продукт не найден
+
+    } // end of method
+
+
 } // end of class

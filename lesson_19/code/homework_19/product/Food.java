@@ -1,4 +1,4 @@
-package homework_19.model;
+package homework_19.product;
 
 // Создать класс Food расширяющий класс Product с полем private String expDate, которое хранит дату истечения срока годности.
 

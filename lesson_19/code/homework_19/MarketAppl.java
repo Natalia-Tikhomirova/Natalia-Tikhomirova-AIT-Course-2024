@@ -6,10 +6,10 @@ package homework_19;
 // - метод возвращающий сумму цен всех продуктов.
 // В классе MarketAppl создать метод принимающий баркод и возвращающий продукт с данным баркодом. В методе main вызвать новые методы. Результат их работы напечатать в консоль.
 
-import homework_19.model.Food;
-import homework_19.model.MeatFood;
-import homework_19.model.MilkFood;
-import homework_19.model.Product;
+import homework_19.product.Food;
+import homework_19.product.MeatFood;
+import homework_19.product.MilkFood;
+import homework_19.product.Product;
 
 import java.util.Scanner;
 
@@ -70,11 +70,11 @@ public class MarketAppl {
         return totalPrice;
     } // end of method
 
-    // Метод для поиска продукта по штрих-коду
+    // Метод для поиска продукта по бар-коду
     public static Product findProductByBarCode(Product[]products, long barCode){
         for (int i = 0; i < products.length; i++) {
             if(products[i].getBarCode() == barCode){
-                return products[i];  // Возвращаем продукт, если штрих-код совпадает
+                return products[i];  // Возвращаем продукт, если бар-код совпадает
             }
         } // end of for
 

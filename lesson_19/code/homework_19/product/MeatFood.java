@@ -1,4 +1,4 @@
-package homework_19.model;
+package homework_19.product;
 
 // Создать класс MeatFood расширяющий класс Food с полем private String meatType,которое хранит тип мяса из которого изготовлен продукт.
 

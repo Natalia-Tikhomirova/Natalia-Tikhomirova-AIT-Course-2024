@@ -1,4 +1,4 @@
-package homework_19.model;
+package homework_19.product;
 
 // Создать класс MilkFood расширяющий класс Food с полями private String milkType, private double fat, которые хранят тип молока и жирность продукта соответственно. Во всех классах переопределить метод toString.
 
