@@ -33,10 +33,10 @@ public class MarketAppl {
 
         System.out.println("=================================================================");
 
-        // Поиск продукта по штрих-коду:
-        Scanner scanner = new Scanner(System.in);                // Запрос штрих-кода у пользователя
+        // Поиск продукта по баркоду:
+        Scanner scanner = new Scanner(System.in);                // Запрос баркода у пользователя
         System.out.println("Введите штрих-код для поиска продукта: ");
-        long barCode = scanner.nextLong();                       // Чтение штрих-кода
+        long barCode = scanner.nextLong();                       // Чтение баркода
 
         Product foundProduct = findProductByBarCode(products,barCode);
 
@@ -70,11 +70,11 @@ public class MarketAppl {
         return totalPrice;
     } // end of method
 
-    // Метод для поиска продукта по бар-коду
+    // Метод для поиска продукта по баркоду
     public static Product findProductByBarCode(Product[]products, long barCode){
         for (int i = 0; i < products.length; i++) {
             if(products[i].getBarCode() == barCode){
-                return products[i];  // Возвращаем продукт, если бар-код совпадает
+                return products[i];  // Возвращаем продукт, если баркод совпадает
             }
         } // end of for
 
