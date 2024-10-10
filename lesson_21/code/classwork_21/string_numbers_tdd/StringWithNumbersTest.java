@@ -23,9 +23,6 @@ class StringWithNumbersTest {
         int expected = 454;
         int actual = stringWithNumbers.sumOfNumbersInString(str); //  результат actual
         assertEquals(expected,actual); // метод из библиотеки: сравнивает ожидаемое и актуальное
-
-
     }
-
 
 }
