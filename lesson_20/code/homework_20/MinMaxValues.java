@@ -42,7 +42,7 @@ public class MinMaxValues {
         } // end of switch
     } // end of method
 
-    // Метод для вывода минимальных и максимальных значений
+    // Метод для вывода минимальных и максимальных значений:
     private static void printMinMax(String type) {
         switch (type) {
             case "byte":
