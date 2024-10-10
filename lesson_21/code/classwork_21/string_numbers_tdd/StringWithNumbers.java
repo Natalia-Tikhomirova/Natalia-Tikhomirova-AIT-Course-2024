@@ -33,7 +33,7 @@ public class StringWithNumbers {
 
     // 123 456 987 333
 
-    public  int sumOfNumbersInString(String string){  // делаем public
+    public  int sumOfNumbersInString(String string){  // делаем public и убираем static
 
         int sum = 0;
         String [] numbers = string.split(" ");

@@ -24,24 +24,79 @@ class UserTest {
     }
 
     @Test
-    void setEmailNoAt() {
+    void setEmailNoAt() { // нет собаки
         String email = "petermail.de"; // wrong email
         user.setEmail(email);
         assertEquals("peter@mail.de",user.getEmail()); //email didn't change
+    }
+
+    @Test
+    void setEmailNoDot(){ // нет точки
+        String email = "peter@mailde"; // wrong email
+        user.setEmail(email);
+        assertEquals ("peter@mail.de", user.getEmail()); //email didn't change);
 
     }
 
     @Test
-    void setEmailNoDot(){
-
+    void setEmailNoLetter(){ // short
+        String email = "peter@maild"; // wrong email
+        user.setEmail(email);
+        assertEquals("peter@mail.de", user.getEmail());
     }
 
-    @Test
-    void setEmailNoLetter(){
+     @Test
+    void setEmailWithPlus(){
+        String email = "+peter@mail.de";
+        user.setEmail(email);
+        assertEquals("peter@mail.de", user.getEmail());
+     }
 
-    }
+     @Test
+     void setEmailMultipleAt(){
+         String email = "peter@@mail.de";
+         user.setEmail(email);
+         assertEquals("peter@mail.de", user.getEmail());
+     }
+
+     @Test
+     void setEmailDotAtEnd(){
+         String email = "peter@@mailde.";
+         user.setEmail(email);
+         assertEquals("peter@mail.de", user.getEmail());
+     }
+
+     @Test
+     void  setEmailWhenEmpty(){
+         String email = "";
+         user.setEmail(email);
+         assertEquals("peter@mail.de", user.getEmail());
+     }
+
+     @Test
+     void setEmailWhenOnlyAt(){
+         String email = "@";
+         user.setEmail(email);
+         assertEquals("peter@mail.de", user.getEmail());
+     }
+
+     @Test
+     void setEmailWhenSpace(){
+         String email = "peter@ mail.de";
+         user.setEmail(email);
+         assertEquals("peter@mail.de", user.getEmail());
+     }
+
+     @Test
+     void setEmailWhenDotAfterAt(){
+         String email = "peter@.mail.de";
+         user.setEmail(email);
+         assertEquals("peter@mail.de", user.getEmail());
+     }
+
 
     @Test
-    void setPassword() {
+    void setPassword(){
+
     }
 }

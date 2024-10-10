@@ -6,7 +6,7 @@ public class User {
     private String password;
 
 // constructor
-    public User(String email, String password) {
+    public User(String email, String password) { // устанавливаем нужную нам логику, вручеую меняя this на методы:
         setEmail(email); // вызываем методы для проверки
         setPassword(password); // вызываем методы для проверки
     }
@@ -15,11 +15,11 @@ public class User {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(String email) { // проверяем проходит введенный имейл валидацию или нет
       if (isEmailValid(email)){
           this.email = email;
     }else{
-          System.out.println(email + "is NOT valid.");
+          System.out.println(email + " is NOT valid.");
       }
     }
 

@@ -15,13 +15,13 @@ class StringWithNumbersTest {
     }
 
     @Test
-    void sumOfNumbersInStringTest(){  // mini maid
+    void sumOfNumbersInStringTest(){  // mini main
 
-       // StringWithNumbers.sumOfNumbersInString() // можно так по имени класса, но убираем static
+       // StringWithNumbers.sumOfNumbersInString() // можно так по имени класса, но убираем static в классе
 
         String str = "123 321 10"; // придумали строку и обработали в методе
-        int expected = 454;
-        int actual = stringWithNumbers.sumOfNumbersInString(str); //  результат actual
+        int expected = 454; // ожидаемый результат
+        int actual = stringWithNumbers.sumOfNumbersInString(str); //  результат актуальный -actual
         assertEquals(expected,actual); // метод из библиотеки: сравнивает ожидаемое и актуальное
     }
 
