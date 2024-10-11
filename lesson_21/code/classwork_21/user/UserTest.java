@@ -99,4 +99,4 @@ class UserTest {
     void setPassword(){
 
     }
-}
+} // end of class
