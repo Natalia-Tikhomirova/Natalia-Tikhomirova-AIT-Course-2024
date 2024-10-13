@@ -7,7 +7,7 @@ public class ArrayMethods {
 // step 1 - method swap
     public static void swap (int [] array,int i, int j){
 
-        int temp = array[i]; // отложили длмент масива по индексу i
+        int temp = array[i]; // отложили элемент массива по индексу i
         array [i] = array [j]; // затираем переменную i на переменную j
         array[j] = temp;
     }
