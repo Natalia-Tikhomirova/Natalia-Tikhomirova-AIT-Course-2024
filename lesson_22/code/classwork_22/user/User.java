@@ -1,40 +1,38 @@
-package classwork_21.user;
+package classwork_22.user;
 
 public class User {
 
     private String email;
     private String password;
 
-    //constructor
-    public User(String email, String password) {
-        setEmail(email);
-        setPassword(password);
+// constructor
+    public User(String email, String password) { // устанавливаем нужную нам логику, вручную меняя this на методы:
+        setEmail(email); // вызываем методы для проверки
+        setPassword(password); // вызываем методы для проверки
     }
 
     public String getEmail() {
+
         return email;
     }
 
-    public void setEmail(String email) {
-        if(isEmailValid(email)){
-            this.email = email;
-        } else {
-            System.out.println(email + " is NOT valid.");
-        }
-
+    public void setEmail(String email) { // проверяем проходит введенный имейл валидацию или нет
+      if (isEmailValid(email)){
+          this.email = email;
+    }else{
+          System.out.println(email + " is NOT valid.");
+      }
     }
 
     private boolean isEmailValid(String email) {
-
         int indexAt = email.indexOf('@'); // index where @ placed
-
         if(indexAt == -1 || indexAt != email.lastIndexOf('@')){
             return false;
         }
-        if(email.indexOf('.', indexAt) == -1){ // после @ должна быть точка после @
+        if(email.indexOf('.', indexAt) == -1){
             return false;
         }
-        if(email.lastIndexOf('.') >= email.length() - 2) { // 2 и более символа
+        if(email.lastIndexOf('.') >= email.length() - 2) {
             return false;
         }
         for (int i = 0; i < email.length(); i++) {
@@ -47,7 +45,6 @@ public class User {
 
     }
 
-
     public String getPassword() {
         return password;
     }
@@ -58,10 +55,8 @@ public class User {
         } else {
             System.out.println(password + " is not valid.");
         }
-
     }
-
-//  1) length >= 8 length < 20
+    //  1) length >= 8 length < 20
 //  2) min one digit
 //  3) min one symbol in upperCase
 //  4) min one symbol in lowerCase
@@ -94,5 +89,4 @@ public class User {
         return false;
     }
 
-}
-
+} // end of class
