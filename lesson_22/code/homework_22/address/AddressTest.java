@@ -29,13 +29,13 @@ class AddressTest {
     @Test
     void testinValidCity() {
         address.setCity("moscow");
-        assertEquals(validcity, address.getCity(), "City with lowercase should not be valid");
+        assertEquals(validcity, address.getCity());
     }
 
     @Test
     void testNullCity(){
         address.setCity(null);
-        assertEquals(validcity, address.getCity(),"City should not be null");
+        assertEquals(validcity, address.getCity());
     }
 
     @Test
