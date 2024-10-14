@@ -54,7 +54,9 @@ public class Address {
     }
 
     private boolean isIndexValid(int index) {
-        return index >= 10000 && index <= 99999;
+       // return index >= 10000 && index <= 99999;
+        String indexStr = String.valueOf(index);
+        return indexStr.length()==5;
     } // end of method
 
 
