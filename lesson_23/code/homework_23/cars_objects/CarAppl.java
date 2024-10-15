@@ -6,7 +6,6 @@ public class CarAppl {
 
     public static void main(String[] args) {
 
-        // Общее расстояние поездки:
 
         Car cars1 = new Car("Audi", "diesel", 1.6, 6.6, 45, 3000);
         Car cars2 = new Car("BMW", "petrol", 1.8, 6.8, 49, 3000);
