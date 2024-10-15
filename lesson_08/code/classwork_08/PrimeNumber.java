@@ -20,8 +20,7 @@ public class PrimeNumber {
 
         // check correct number
 
-        while (number <= 0) ;
-        {
+        while (number <= 0) {
 
             System.out.println(" Wrong input! "); // при вводе отриц числа печатаем:
             System.out.println(" Try again, pls!");

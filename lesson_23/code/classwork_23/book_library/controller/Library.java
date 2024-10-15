@@ -1,0 +1,88 @@
+package classwork_23.book_library.controller;
+
+// Реализовать методы:
+//- печать списка всех книг в библиотеке;
+//- получение кол-ва книг в библиотеке;
+//- поиска книги по ISBN;
+//- добавление книги в библиотеку с учетом требований:
+//  - не добавлять null
+//  - не добавлять дубликат
+//  - не добавлять больше, чем может вместить в себя библиотека.
+//- удаление книги из библиотеки.
+
+import classwork_23.book_library.model.Book;
+
+public class Library {
+
+    // fields
+    private Book[] books; // потенциальное количество книг
+    private int size;     // текущее кол-во книг в библиотеке
+
+    // constructor
+
+    public Library(int capacity) {
+        this.books = new Book[capacity];
+        this.size = 0;
+    }
+
+
+    // CRUD methods
+    public  boolean addBook(Book book){
+        // negative cases
+        if(book == null){
+            return false;
+        }
+
+        if(size == books.length){
+            return false;
+        }
+        if(!(findBook(book.getIsbn()) == null)){
+            return false;
+        }
+        // positive case
+        books[size] = book; // ставим книгу в конец массива на первое свободное место
+        size++;
+        return true;
+    }
+
+
+    // void printBooks()
+    public void printBooks(){
+        for (int i = 0; i < size; i++) {
+            System.out.println(books[i]);
+        }
+    }
+
+    public  Book findBook(long isbn){
+        for (int i = 0; i < size; i++) {
+            if(books[i].getIsbn() == isbn){
+                return books[i];
+            }
+        }
+        return null; // null - не нашли книгу
+    }
+
+
+    public Book removeBook(long isbn){
+        for (int i = 0; i < size; i++) {
+            if(books[i].getIsbn() == isbn){
+                Book victim = books[i]; // жертва
+                books[i] = books[size]; // last book out insted victim
+                books[size-1] = null;   // затираем последний элемент массива
+                size--;
+                return victim;
+            }
+        }
+        return null;
+    }
+    // size--;
+
+    // boolean updateBook()
+
+    public int size(){
+        return size;
+    }
+
+
+
+} // end class
