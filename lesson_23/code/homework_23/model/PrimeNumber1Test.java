@@ -27,7 +27,7 @@ class PrimeNumber1Test {
 
     @Test
     void isPrimeNumberNonPrimeTest() {
-        assertFalse(PrimeNumber1.isPrimeNumber(4));  // 4 - не простое
+        assertFalse(PrimeNumber1.isPrimeNumber(4));  // Ожидаем false
     }
 
 } // end of class
