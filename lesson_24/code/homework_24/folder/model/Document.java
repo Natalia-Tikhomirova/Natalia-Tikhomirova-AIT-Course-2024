@@ -6,48 +6,58 @@ import java.util.Objects;
 
 public class Document {
 
-    public static final int IIN_LENGTH = 10;
+    public static final int IIN_LENGTH = 10; // Уникальный номер документа содержит 10 цифр.
 
     // field
-
     private String title;
     private String author;
     private long iin;
 
     // constructor
-
-
     public Document(String title, String author, long iin) {
         this.title = title;
         this.author = author;
         this.iin = checkIin(iin);
     }
 
+    // Метод для проверки IIN (идентификационного номера) на корректность:
     private long checkIin(long iin){
-        // проверить длину iin по кол-ву цифр в этом числе
+        // Проверяем длину IIN по количеству цифр в этом числе:
         if(countDigit(iin)){
+            // Если длина корректна, возвращаем IIN:
             return iin;
         }
-        return -1; // сигнал того, что isbn неверный
+        // Если IIN некорректен, возвращаем -1 как сигнал о неверном IIN:
+        return -1;
     }
 
+    // Метод для подсчета количества цифр в IIN:
     private boolean countDigit(long iin) {
-        int count = 0;
-        while ((iin / 10 != 0)){
-            count++;
+        int count = 0;                                  // Переменная для подсчета цифр
+        long temp = iin;                                // Временная переменная для работы с IIN
+        // Цикл выполняется, пока временная переменная не станет равной 0:
+        while ((temp  != 0)){
+            temp = temp / 10;                            // Делим временную переменную на 10
+            count++;                                     // Увеличиваем счетчик цифр
         }
+        // Возвращаем true, если количество цифр равно заранее определенной длине IIN:
         return count == IIN_LENGTH;
     }
 
     public long getIin() {
-
         return iin;
     }
 
     // TODO предусмотреть защиту по поводу 10 цифр и в этом случае
+    // Метод для установки значения IIN:
     public void setIin(long iin) {
-
-        this.iin = iin;
+        // Проверяем, корректен ли введенный IIN:
+        if(checkIin(iin) > 0){
+            this.iin = iin;
+        }else {
+            // Если IIN некорректен, выводим сообщение об ошибке:
+            System.out.println("IIN is not correct.");
+        }
     }
 
     public String getTitle() {
