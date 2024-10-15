@@ -25,7 +25,7 @@ class ArchiveTest {
         archive = new Archive(5);
 
         // Инициализация массива документов с заданной длиной
-        documents = new Document[4];
+        documents = new Document[5];
 
         // Заполнение массива документами:
         documents[0] = new Document("T","A", 1234567890L);
