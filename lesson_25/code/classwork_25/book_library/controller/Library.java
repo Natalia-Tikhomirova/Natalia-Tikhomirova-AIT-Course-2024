@@ -1,4 +1,4 @@
-package classwork_24.book_library.controller;
+package classwork_25.book_library.controller;
 
 // Реализовать методы:
 //- печать списка всех книг в библиотеке;
@@ -10,7 +10,7 @@ package classwork_24.book_library.controller;
 //  - не добавлять больше, чем может вместить в себя библиотека.
 //- удаление книги из библиотеки.
 
-import classwork_24.book_library.model.Book;
+import classwork_25.book_library.model.Book;
 
 public class Library {
 

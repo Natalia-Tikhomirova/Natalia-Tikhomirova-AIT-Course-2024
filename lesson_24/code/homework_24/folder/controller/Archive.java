@@ -8,7 +8,7 @@ public class Archive {
 
     // fields
 
-    private Document[]documents;                            // Массив для хранения документов
+    private Document[]documents;                            // Массив для хранения (храним сущности)документов
     private int size;                                       // Текущий размер (количество документов)
 
     // constructor
