@@ -13,7 +13,7 @@ public class Document {
     private String author;
     private long iin;
 
-    // constructor
+    // constructor - это МЕТОД, позволяющий создавать объекты
     public Document(String title, String author, long iin) {
         this.title = title;
         this.author = author;
@@ -76,6 +76,9 @@ public class Document {
         this.author = author;
     }
 
+    // equals и hashCode методы идентификации объектов по составу полей:
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -88,6 +91,7 @@ public class Document {
         return Objects.hashCode(iin);
     }
 
+   // печатает
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Archive{");

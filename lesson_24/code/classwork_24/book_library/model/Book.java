@@ -15,7 +15,7 @@ public class Book {
     private long isbn;
     private int yearOfPublishing;
 
-    // constructor
+    // constructor - это МЕТОД, позволяющий создавать объекты
     public Book(String title, String author, long isbn, int yearOfPublishing) {
         this.title = title;
         this.author = author;
@@ -91,6 +91,7 @@ public class Book {
         this.yearOfPublishing = yearOfPublishing;
     }
 
+    // equals и hashCode методы идентификации объектов по составу полей
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -103,6 +104,7 @@ public class Book {
         return Objects.hashCode(isbn);
     }
 
+    // печатает
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Book{");
