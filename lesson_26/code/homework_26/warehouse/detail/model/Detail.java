@@ -13,11 +13,11 @@ import java.util.Objects;
 public abstract class Detail {
 
     // fields
-    protected long barCode;
-    protected double size;
-    protected String material;
-    protected String vendor;
-    protected double weight;
+    protected long barCode;                // штрих-код
+    protected double size;                 // главный размер
+    protected String material;             // материал
+    protected String vendor;               // поставщик
+    protected double weight;               // вес
 
     // constructor
 
