@@ -39,7 +39,6 @@ class ValidatorTest {
         assertFalse(Validator.checkDateFormatUS("2023/02/26"));
         assertFalse(Validator.checkDateFormatUS("2023.10.5"));
         assertFalse(Validator.checkDateFormatUS("2023.10.00"));
-
     }
 
     @Test
@@ -64,6 +63,4 @@ class ValidatorTest {
         assertFalse(Validator.checkLessEquals255("-5"));
         assertFalse(Validator.checkLessEquals255("b5"));
     }
-
-  
 }
