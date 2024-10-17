@@ -1,8 +1,8 @@
-package homework_26.amt.test;
+package homework_26.amt.document.test;
 
-import homework_26.amt.dao.Archive;
-import homework_26.amt.dao.ArchiveImpl;
-import homework_26.amt.model.Document;
+import homework_26.amt.document.dao.Archive;
+import homework_26.amt.document.dao.ArchiveImpl;
+import homework_26.amt.document.model.Document;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

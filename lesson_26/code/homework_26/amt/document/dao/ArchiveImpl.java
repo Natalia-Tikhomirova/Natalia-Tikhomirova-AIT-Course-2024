@@ -1,6 +1,6 @@
-package homework_26.amt.dao;
+package homework_26.amt.document.dao;
 
-import homework_26.amt.model.Document;
+import homework_26.amt.document.model.Document;
 
 public class ArchiveImpl implements Archive{
 

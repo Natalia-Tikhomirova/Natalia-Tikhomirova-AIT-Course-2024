@@ -1,4 +1,4 @@
-package homework_26.amt.model;
+package homework_26.amt.document.model;
 
 import java.util.Objects;
 
