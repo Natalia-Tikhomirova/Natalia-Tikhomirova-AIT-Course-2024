@@ -62,6 +62,14 @@ class ArchiveTest {
         // 4. Добавляем еще один документ, что превышает вместимость (capacity).
         Document oneMoreDocument = new Document("T5","A5", 1334566894L);
         assertFalse(archive.addDocument(oneMoreDocument),"Не должно быть возможности добавить документ, превышающий вместимость.");
+
+    }
+    @Test
+    void findByAuthorTest(){
+        Document foundDocument = archive.findByAuthor("A");
+        assertNotNull(foundDocument);
+        assertEquals("A",foundDocument.getAuthor());
+
     }
 
 
