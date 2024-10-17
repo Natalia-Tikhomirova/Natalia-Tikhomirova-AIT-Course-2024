@@ -13,17 +13,17 @@ import classwork_26.ait.employee.model.Employee;
 
 public interface Company {
 
-    boolean addEmployee(Employee employee);
+    boolean addEmployee(Employee employee); // добавление
 
-    Employee removeEmployee(int id); // вернет объект типа  Employee - сотрудника
+    Employee findEmployee(int id); // нахождение
 
-    Employee findEmployee(int id);
+    Employee updateEmployee(Employee employee); //обновление
 
-    Employee updateEmployee(Employee employee);
+    Employee removeEmployee(int id); // удаление; вернет объект типа  Employee - сотрудника
 
-    int quantity();  // это метод похожий на size
+    void printEmployee(); // печать
 
-    void printEmployee();
+    int quantity();  // кол-во сотрудников; это метод похожий на size
 
     double totalSalary();
 
