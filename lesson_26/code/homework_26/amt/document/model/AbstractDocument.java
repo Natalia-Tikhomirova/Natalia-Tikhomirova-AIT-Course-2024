@@ -20,7 +20,6 @@ public abstract class AbstractDocument {
 
     // getter and setter
 
-
     public long getIin() {
         return iin;
     }
