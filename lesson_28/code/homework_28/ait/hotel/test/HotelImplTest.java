@@ -56,10 +56,9 @@ class HotelImplTest {
 
     @Test
     void testRemovePetsWithExpiredStayTest() {
-        hotel.addPet(pets[0], 0); // Питомец с истекшим сроком пребывания
-        hotel.addPet(pets[1], 2); // Питомец с действующим сроком пребывания
+        hotel.addPet(pets[0], 0);
+        hotel.addPet(pets[1], 2);
         hotel.removePetsWithExpiredStay();
-        // Проверяем, что остался только один питомец
         assertEquals(5, hotel.count());
     }
 
