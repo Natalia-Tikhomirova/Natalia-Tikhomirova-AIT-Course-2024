@@ -6,8 +6,8 @@ import homework_27.supermarket.model.Product;
 
 public class SupermarketImpl implements  Supermarket{
 
-    Product[] products;
-    int count;
+    private Product[] products;
+    private int count;
 
     public SupermarketImpl(int capacity) {
         this.products = new Product[capacity];
