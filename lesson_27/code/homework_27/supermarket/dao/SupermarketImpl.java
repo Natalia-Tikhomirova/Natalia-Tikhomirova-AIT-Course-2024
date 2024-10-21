@@ -92,7 +92,6 @@ public class SupermarketImpl implements  Supermarket{
         for (int i = 0; i < count; i++) {
             System.out.println(products[i]);
         }
-
     }
 
 } // end of class

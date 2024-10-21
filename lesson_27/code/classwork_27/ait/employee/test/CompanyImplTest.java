@@ -26,10 +26,10 @@ class CompanyImplTest {
 
         // emp - тестовый набор данных - тестовая company
         emp = new Employee[4];
-        emp[0] = new Manager(1,"L1","L1",160, 5000,25);
-        emp[1] = new SalesManager(2,"N2","L2",160, 50000,0.1);
-        emp[2] = new SalesManager(3,"N3","L3",160, 80000,0.15);
-        emp[3] = new Worker(4,"N4","L4",160,20);
+        emp[0] = new Manager(1, "N1", "L1", 160, 5000, 25);
+        emp[1] = new SalesManager(2, "N2", "L2", 160, 50000, 0.1);
+        emp[2] = new SalesManager(3, "N3", "L3", 160, 80000, 0.15);
+        emp[3] = new Worker(4, "N4", "L4", 160, 20);
 
         //TODO поместить объекты emp в объект company с помощью метода addEmployee
 
@@ -98,10 +98,13 @@ class CompanyImplTest {
 
     @Test
     void totalSalaryTest() {
+        double totalSalary = 29200;
+        assertEquals(totalSalary,company.totalSalary());
     }
 
     @Test
     void totalSalesTest() {
+        assertEquals(130000,company.totalSales());
     }
 
     @Test

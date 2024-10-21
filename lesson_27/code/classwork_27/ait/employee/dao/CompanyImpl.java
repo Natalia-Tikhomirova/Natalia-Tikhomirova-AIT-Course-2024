@@ -1,6 +1,7 @@
 package classwork_27.ait.employee.dao;
 
 import classwork_27.ait.employee.model.Employee;
+import classwork_27.ait.employee.model.SalesManager;
 
 public class CompanyImpl implements Company {
 
@@ -83,12 +84,23 @@ public class CompanyImpl implements Company {
 
     @Override
     public double totalSalary() {
-        return 0;
+        double totalSalary = 0;
+        for (int i = 0; i < size; i++) {
+            totalSalary += employees[i].calcSalary();
+        }
+        return totalSalary;
     }
 
     @Override
     public double totalSales() {
-        return 0;
+        double totalSales = 0;
+        for (int i = 0; i < size; i++) {
+            if(employees[i] instanceof SalesManager){ // проверка перед кастингом
+                SalesManager sm = (SalesManager) employees[i];
+                totalSales += sm.getSalesValue();
+            }
+        }
+        return totalSales;
     }
 
     @Override
