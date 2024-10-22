@@ -4,7 +4,7 @@ import homework_28.ait.hotel.dao.Hotel;
 import homework_28.ait.hotel.dao.HotelImpl;
 import homework_28.ait.hotel.model.Cat;
 import homework_28.ait.hotel.model.Dog;
-import homework_28.ait.hotel.model.Pets;
+import homework_28.ait.hotel.model.Pet;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,12 +15,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class HotelImplTest {
 
     private Hotel hotel;
-    private Pets[]pets;
+    private Pet[]pets;
 
     @BeforeEach
     void setUp() {
-        hotel = new HotelImpl(10);
-        pets = new Pets[5];
+        hotel = new HotelImpl(5);
+        pets = new Pet[5];
 
         pets[0] = new Dog(1,"Cirneco dell'Etna",9,"Birbo",5,"dog");
         pets[1] = new Dog(2,"Cirneco dell'Etna",4,"Turbo",7,"dog");

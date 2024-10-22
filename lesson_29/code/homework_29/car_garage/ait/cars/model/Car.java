@@ -1,4 +1,4 @@
-package classwork_28.car_garage.ait.cars.model;
+package homework_29.car_garage.ait.cars.model;
 
 import java.util.Objects;
 

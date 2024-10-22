@@ -26,10 +26,10 @@ class CompanyImplTest {
 
         // emp - тестовый набор данных - тестовая company
         emp = new Employee[4];
-        emp[0] = new Manager(1, "N1", "L1", 120, 5000, 25);
-        emp[1] = new SalesManager(2, "N2", "L2", 130, 50000, 0.1);
-        emp[2] = new SalesManager(3, "N3", "L3", 135, 80000, 0.15);
-        emp[3] = new Worker(4, "N4", "L4", 160, 20);
+        emp[0] = new Manager(1, "N1", "L1", 160, 5000, 25);
+        emp[1] = new SalesManager(2, "N2", "L2", 160, 50000, 0.1);
+        emp[2] = new SalesManager(3, "N3", "L3", 165, 80000, 0.15);
+        emp[3] = new Worker(4, "N4", "L4", 170, 20);
 
         //TODO поместить объекты emp в объект company с помощью метода addEmployee
 
@@ -99,7 +99,7 @@ class CompanyImplTest {
 
     @Test
     void totalSalaryTest() {
-        double totalSalary = 28200;
+        double totalSalary = 29400;
         assertEquals(totalSalary,company.totalSalary());
     }
 
@@ -107,13 +107,12 @@ class CompanyImplTest {
     void totalSalesTest() {
         assertEquals(130000,company.totalSales());
 
-
     }
 
     @Test
     void testAverageSalaryTest() {
         assertEquals(7050.0, company.averageSalary());
-        // assertEquals(company.totalSalary()/company.quantity(),company.averageSalary());
+        // assertEquals(company.totalSalary()/company.quantity(),company.averageSalary()); - другой вариант
     }
 
 
@@ -121,7 +120,7 @@ class CompanyImplTest {
     void findEmployeeHoursGreaterThanTest() {
 
         Employee[] expected = {emp[2],emp[3]};
-        Employee[] actual = company.findEmployeeHoursGreaterThan(130);
+        Employee[] actual = company.findEmployeeHoursGreaterThan(160);
         assertArrayEquals(expected,actual);
 
     }

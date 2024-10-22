@@ -1,23 +1,23 @@
 package homework_28.ait.hotel.dao;
 
-import homework_28.ait.hotel.model.Pets;
+import homework_28.ait.hotel.model.Pet;
 
 public class HotelImpl implements Hotel {
 
-    private Pets[] pets;
-    private double[]stayDuration;
+    private Pet[] pets;
+    private int []stayDuration;
     private int count;
 
     public HotelImpl(int capacity) {
-        this.pets = new Pets[capacity];
-        this.stayDuration = new double[capacity];
+        this.pets = new Pet[capacity];
+        this.stayDuration = new int[capacity];
         this.count = 0;
     }
 
 
     @Override
-    public boolean addPet(Pets pets, int days) {
-        if(count >= this.pets.length){
+    public boolean addPet(Pet pet, int days) {
+        if(count >= pets.length){ // почему не получается через просто pets.length
             return false;
         }
         if(pets == null || days <= 0){
@@ -25,18 +25,18 @@ public class HotelImpl implements Hotel {
         }
 
         for (int i = 0; i < count; i++) {
-            if (this.pets[i].getId() == pets.getId()) {
+            if (this.pets[i].getId() == pet.getId()) { // почему не получается через просто pets.length
                 return false;
             }
         }
-        this.pets[count] = pets;
+        pets[count] = pet;
         stayDuration[count] = days;
         count++;
         return true;
     }
 
     @Override
-    public Pets findPetsByBreed(String breed) {
+    public Pet findPetsByBreed(String breed) {
         for (int i = 0; i < count; i++) {
             if(pets[i].getBreed().equals(breed)){
                 return pets[i];
@@ -46,7 +46,7 @@ public class HotelImpl implements Hotel {
     }
 
     @Override
-    public Pets findPetsById(int id) {
+    public Pet findPetsById(int id) {
         for (int i = 0; i < count; i++) {
             if(pets[i].getId() == id){
                 return pets[i];
@@ -56,10 +56,10 @@ public class HotelImpl implements Hotel {
     }
 
     @Override
-    public  Pets removePetsWithExpiredStay() {
+    public Pet removePetsWithExpiredStay() {
         for (int i = 0; i < count; i++) {
             if(stayDuration[i] <= 0){
-                Pets removedPet = pets[i];
+                Pet removedPet = pets[i];
 
                 pets[i] = pets[count - 1];
                 stayDuration[i] = stayDuration[count - 1];

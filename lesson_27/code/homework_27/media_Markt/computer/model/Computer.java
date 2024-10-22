@@ -2,15 +2,15 @@ package homework_27.media_Markt.computer.model;
 
 import java.util.Objects;
 
-public abstract class Computer {
+public class Computer {
 
-    protected long barCode;
-    protected String cpu;
-    protected int ram;
-    protected int ssd;
-    protected String brand;
-    protected double price;
-    protected boolean discount;
+    private long barCode;
+    private String cpu;
+    private int ram;
+    private int ssd;
+    private String brand;
+    private double price;
+    private boolean discount;
 
     public Computer(long barCode, String cpu, int ram, int ssd, String brand, double price, boolean discount) {
         this.barCode = barCode;

@@ -2,7 +2,7 @@ package homework_28.ait.hotel.model;
 
 import java.util.Objects;
 
-public class Dog extends Pets{
+public class Dog extends Pet {
 
     private String petType;
 

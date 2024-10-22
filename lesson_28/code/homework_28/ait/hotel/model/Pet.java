@@ -2,7 +2,7 @@ package homework_28.ait.hotel.model;
 
 import java.util.Objects;
 
-public abstract class Pets {
+public abstract class Pet {
 
     protected int id;
     protected String breed;
@@ -10,7 +10,7 @@ public abstract class Pets {
     protected String name;
     double dailyRate; // ставка за сутки
 
-    public Pets(int id, String breed, int age, String name, double dailyRate) {
+    public Pet(int id, String breed, int age, String name, double dailyRate) {
         this.id = id;
         this.breed = breed;
         this.age = age;
@@ -61,7 +61,7 @@ public abstract class Pets {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Pets pets)) return false;
+        if (!(o instanceof Pet pets)) return false;
         return id == pets.id && Double.compare(dailyRate, pets.dailyRate) == 0 && Objects.equals(breed, pets.breed);
     }
 

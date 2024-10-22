@@ -119,9 +119,10 @@ public class CompanyImpl implements Company {
 
     @Override
     public Employee[] findEmployeeSalaryRange(double min, double max) {
-       return findEmployeeByPredicate(employee -> employee.calcSalary() >= min && employee.calcSalary() <= max);
+       return findEmployeeByPredicate(employee -> employee.calcSalary() > min && employee.calcSalary() < max);
     }
 
+    // в этот метод передаем логическое выражение, которое будет тестировать объекты типа Employee
     public Employee[] findEmployeeByPredicate(Predicate<Employee> predicate) {
         int count = 0;
         for (int i = 0; i < size; i++) {
@@ -138,4 +139,6 @@ public class CompanyImpl implements Company {
         }
        return res;
     }
+
+
 } // end of class

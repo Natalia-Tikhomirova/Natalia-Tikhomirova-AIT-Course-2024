@@ -1,10 +1,10 @@
-package classwork_28.car_garage.ait.cars.dao;
+package homework_29.car_garage.ait.cars.dao;
 
-import classwork_28.car_garage.ait.cars.model.Car;
+import homework_29.car_garage.ait.cars.model.Car;
 
 import java.util.function.Predicate;
 
-public class GarageImpl implements Garage{
+public class GarageImpl implements Garage {
 
     private Car[] cars;
     private int size;
@@ -25,6 +25,16 @@ public class GarageImpl implements Garage{
 
     @Override
     public Car removeCar(String regNumber) {
+        for (int i = 0; i < size; i++) {
+            if(cars[i].getRegNumber() == regNumber){
+                Car removedCar = cars[i];
+                cars[i] = cars [size - 1];
+                cars[size - 1] = null;
+                size--;
+                return removedCar;
+            }
+        }
+
         return null;
     }
 

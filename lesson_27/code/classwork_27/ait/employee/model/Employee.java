@@ -76,6 +76,7 @@ public abstract class Employee {
         sb.append(", secondName=").append(secondName);
         sb.append(", hours=").append(hours);
         sb.append('}');
+        sb.append(", salary=").append(calcSalary()); // добавил зарплату в распечатку
         return sb.toString();
     }
 
