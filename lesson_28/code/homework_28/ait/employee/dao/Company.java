@@ -27,6 +27,7 @@ public interface Company {
     double totalSalary();
 
     double totalSales(); //  totalSales только у SalesManager
+
     double averageSalary();
 
     Employee[] findEmployeeHoursGreaterThan (int hours); // массив сотрудников

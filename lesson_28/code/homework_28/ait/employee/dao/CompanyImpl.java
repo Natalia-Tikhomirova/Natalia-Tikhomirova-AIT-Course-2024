@@ -88,7 +88,7 @@ public class CompanyImpl implements Company {
     public double totalSalary() {
         double totalSalary = 0;
         for (int i = 0; i < size; i++) {
-            totalSalary += employees[i].calcSalary();
+            totalSalary += employees[i].calcSalary(); // метод - calcSalary();
         }
         return totalSalary;
     }
@@ -109,9 +109,6 @@ public class CompanyImpl implements Company {
 
     @Override
     public double averageSalary() {
-        if(size == 0){
-            return 0;
-        }
         return totalSalary()/size;
     }
 

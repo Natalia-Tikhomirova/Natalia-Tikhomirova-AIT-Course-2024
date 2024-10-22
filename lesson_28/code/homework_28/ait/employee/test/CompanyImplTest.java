@@ -62,6 +62,7 @@ class CompanyImplTest {
         assertFalse(company.addEmployee(oneMoreEmp));
     }
 
+
     @Test
     void removeEmployeeTest() {
         // cant remove exist
@@ -106,11 +107,13 @@ class CompanyImplTest {
     void totalSalesTest() {
         assertEquals(130000,company.totalSales());
 
+
     }
 
     @Test
-    void testAverageSalary() {
-        assertEquals(7050, company.averageSalary());
+    void testAverageSalaryTest() {
+        assertEquals(7050.0, company.averageSalary());
+        // assertEquals(company.totalSalary()/company.quantity(),company.averageSalary());
     }
 
 
