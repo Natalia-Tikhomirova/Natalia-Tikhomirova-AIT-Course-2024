@@ -2,6 +2,7 @@ package homework_29.car_garage.ait.cars.dao;
 
 import homework_29.car_garage.ait.cars.model.Car;
 
+import java.util.Comparator;
 import java.util.function.Predicate;
 
 public class GarageImpl implements Garage {
@@ -78,6 +79,17 @@ public class GarageImpl implements Garage {
         for (int i = 0; i < size; i++) {
             System.out.println(cars[i]);
         }
+    }
+
+    @Override
+    public Car[] printAllCarsSortedByColor() {
+        Comparator<Car> comparatorByColor = new Comparator<Car>() {
+            @Override
+            public int compare(Car color1, Car color2) {
+                return color1.getColor().compareTo(color2.getColor());
+            }
+        };
+        return null;
     }
 
     // в этот метод передаем логическое выражение, которое будет тестировать объекты типа Car

@@ -17,7 +17,7 @@ public class HotelImpl implements Hotel {
 
     @Override
     public boolean addPet(Pet pet, int days) {
-        if(count >= pets.length){ // почему не получается через просто pets.length
+        if(count >= pets.length){
             return false;
         }
         if(pets == null || days <= 0){
@@ -25,7 +25,7 @@ public class HotelImpl implements Hotel {
         }
 
         for (int i = 0; i < count; i++) {
-            if (this.pets[i].getId() == pet.getId()) { // почему не получается через просто pets.length
+            if (this.pets[i].getId() == pet.getId()) {
                 return false;
             }
         }

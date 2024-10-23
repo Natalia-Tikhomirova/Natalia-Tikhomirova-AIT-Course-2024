@@ -75,9 +75,6 @@ class GarageImplTest {
         Car[] expected = {cars[3]};
         Car[] actual = garage.findcarsByEngine(1.5,2.5);
         assertArrayEquals(expected,actual);
-
-
-
     }
 
     @Test
@@ -98,4 +95,10 @@ class GarageImplTest {
     void testPrintCars() {
         garage.printCars();
     }
+
+    @Test
+    void testPrintAllCarsSortedByColor() {
+    }
+
+
 } // end of class

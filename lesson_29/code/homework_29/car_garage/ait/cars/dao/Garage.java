@@ -14,6 +14,8 @@ public interface Garage {
     int size();
     void printCars();
 
+    Car[] printAllCarsSortedByColor();
+
 
 
 }
