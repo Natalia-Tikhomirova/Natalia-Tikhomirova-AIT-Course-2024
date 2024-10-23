@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.Comparator;
+
 // 1. Получить число без тире:
 // - извлечь символы (substring) и преобразовать в целое число (Integer.parseInt)
 // 2. Сравнить:
