@@ -6,6 +6,11 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.Comparator;
 
+// Выполните с набором объектов этого класса все то, что мы делали на занятии:
+// - сортировка по умолчанию
+// - сортировка по 2-м критериям
+// - поиск в массиве с помощью Arrays.binarySearch()
+
 class BookTest {
 
     Book[]books;
