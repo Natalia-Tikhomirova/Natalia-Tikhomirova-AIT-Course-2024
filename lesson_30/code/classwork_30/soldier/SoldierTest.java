@@ -94,7 +94,7 @@ class SoldierTest {
     // по значению profile и росту
 
     @Test
-    void testSortSoldiersByProfile(){
+    void testSortSoldiersByProfileAndHeight(){
         printArray(soldiers);
         Arrays.sort(soldiers, (s1, s2) -> {
             int res = -(s1.getProfile() - s2.getProfile()); // reverse sort by Profile

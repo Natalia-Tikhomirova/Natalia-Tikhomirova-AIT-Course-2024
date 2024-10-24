@@ -74,7 +74,7 @@ public class Book  implements Comparable<Book>{
     }
 
     @Override
-    public int compareTo(@NotNull Book book) {
+    public int compareTo(Book book) {
         return Integer.compare(this.getYear(),book.getYear()) ;
     }
 } // end of class

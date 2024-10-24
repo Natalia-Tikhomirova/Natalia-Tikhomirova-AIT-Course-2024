@@ -1,0 +1,6 @@
+// return Integer.compare(this.getPopulation(),city.getPopulation()); // int
+
+// return Double.compare(w1.getPrice(),w2.getPrice()); // double
+
+// return this.getName().compareTo(city.getName()); // String
+
