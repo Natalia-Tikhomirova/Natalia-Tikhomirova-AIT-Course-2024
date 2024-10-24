@@ -1,6 +1,23 @@
-// return Integer.compare(this.getPopulation(),city.getPopulation()); // int
+
+private Car[]findCarsByPredicate(Predicate<Car> predicate)
+
+●	 return с лямбда выражениями:
+// return findCarsByPredicate(car -> car.getModel().equals(model));//String
+// или так: model.equals(car.getModel())
+// return findCarsByPredicate(car -> car.getEngine() >= min && car.getEngine() <= max);                                     // int, double
+
+Используем в методах:
+•	для сравнения объектов (String, Integer, Double  и т.д..) используем -  equals;
+•	Для примитивных типов (int, double, long ....) используем равно-равно  = =, а в случае диапазона >= ......<= .
+
+
+public class Wine implements Comparable<Wine>
+
+
+●	return с компоратором
+
+// return Integer.compare(this.getPopulation(),city.getPopulation()); //int
 
 // return Double.compare(w1.getPrice(),w2.getPrice()); // double
 
-// return this.getName().compareTo(city.getName()); // String
-
+// return city1.getName().compareTo(city2.getName()); // String
