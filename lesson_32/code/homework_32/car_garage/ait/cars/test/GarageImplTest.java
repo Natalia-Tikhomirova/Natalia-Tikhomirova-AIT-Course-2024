@@ -6,6 +6,9 @@ import homework_32.car_garage.ait.cars.model.Car;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class GarageImplTest {
@@ -17,9 +20,9 @@ class GarageImplTest {
     void setUp() {
         garage = new GarageImpl(5);
         cars = new Car[4];
-        cars[0] = new Car("Number1", "Model1", "Company1", 1.5, "Red");
+        cars[0] = new Car("Number1", "Model1", "Company4", 1.5, "Red");
         cars[1] = new Car("Number2", "Model2", "Company1", 2.5, "Green");
-        cars[2] = new Car("Number3", "Model1", "Company2", 1.5, "Red");
+        cars[2] = new Car("Number3", "Model1", "Company3", 1.5, "Red");
         cars[3] = new Car("Number4", "Model4", "Company2", 2.0, "Green");
 
         // TODO add cars to garage
@@ -77,9 +80,9 @@ class GarageImplTest {
     }
 
     @Test
-    void findcarsByColorTest() {
+    void findCarsByColorTest() {
         Car[]expected = {cars[0],cars[2]};
-        Car[]actual = garage.findcarsByModel("Model1");
+        Car[]actual = garage.findCarsByColor("Red");
         assertArrayEquals(expected,actual);
     }
 
@@ -97,7 +100,36 @@ class GarageImplTest {
 
     @Test
     void testPrintAllCarsSortedByColor() {
+        Car[] expected = { cars[1], cars[3], cars[0], cars[2] };
+        garage.printAllCarsSortedByColor();
+
+        assertArrayEquals(expected,cars);
+        System.out.println("Actual array length: " + cars.length);
+        System.out.println("Expected array length: " + expected.length);
+        System.out.println(Arrays.toString(cars));
     }
 
+    @Test
+    void testSortCarByModel() {
+        Car[]expected = {cars[0],cars[2],cars[1],cars[3]};
+        garage.sortCarsByModel(cars);
+        assertArrayEquals(expected, cars);
+        System.out.println(Arrays.toString(cars));
+    }
 
+    @Test
+    void testSortCarByColor() {
+        Car[] expected = {cars[1],cars[3],cars[0],cars[2]};
+        garage.sortCarsByColor(cars);
+        assertArrayEquals(expected,cars);
+        System.out.println(Arrays.toString(cars));
+    }
+
+    @Test
+    void testSortCarByCompany() {
+        Car[]expected = {cars[1],cars[3],cars[2],cars[0]};
+        garage.sortCarsByCompany(cars);
+        assertArrayEquals(expected,cars);
+        System.out.println(Arrays.toString(cars));
+    }
 } // end of class

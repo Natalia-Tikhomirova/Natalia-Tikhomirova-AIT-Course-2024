@@ -120,4 +120,27 @@ class CityTest {
 
     }
 
+    // Проверьте работу метода System.arraycopy, скопировав часть массива.
+    // Проверьте работу метода Arrays.copyOfRange
+
+    @Test
+    void testSystemArrayCopy(){
+
+        // расширим массив на 2 элемента
+        City[]citiesCopyPlus2 = new City[cities.length + 2];
+
+        // копируем имеющийся массив в новый (адо не вылететь из предела массива - 8)
+        System.arraycopy(cities,2,citiesCopyPlus2,3,3);
+        printArray(cities,"Original array: ");
+        printArray(citiesCopyPlus2,"Copy of array");
+
+    }
+
+    @Test
+    void testArraysCopyOfRange(){
+        City[]citiesCopy = Arrays.copyOfRange(cities,1,3);
+        printArray(cities,"Original (source) array");
+        printArray(citiesCopy,"Copy of range");
+
+    }
 } // end of class

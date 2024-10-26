@@ -1,7 +1,9 @@
 package homework_32.car_garage.ait.cars.dao;
 
 import homework_32.car_garage.ait.cars.model.Car;
+import org.jetbrains.annotations.NotNull;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.function.Predicate;
 
@@ -17,7 +19,7 @@ public class GarageImpl implements Garage {
 
     @Override
     public boolean addCar(Car car) {
-        if(car == null || size == cars.length || findCarByRegNumber(car.getRegNumber()) != null) {
+        if (car == null || size == cars.length || findCarByRegNumber(car.getRegNumber()) != null) {
             return false;
         }
         cars[size++] = car;
@@ -27,9 +29,9 @@ public class GarageImpl implements Garage {
     @Override
     public Car removeCar(String regNumber) {
         for (int i = 0; i < size; i++) {
-            if(cars[i].getRegNumber() == regNumber){
+            if (cars[i].getRegNumber() == regNumber) {
                 Car removedCar = cars[i];
-                cars[i] = cars [size - 1];
+                cars[i] = cars[size - 1];
                 cars[size - 1] = null;
                 size--;
                 return removedCar;
@@ -42,7 +44,7 @@ public class GarageImpl implements Garage {
     @Override
     public Car findCarByRegNumber(String regNumber) {
         for (int i = 0; i < size; i++) {
-            if(cars[i].getRegNumber().equals(regNumber)){ // т.к. String, то getRegNumber().equals(regNumber)
+            if (cars[i].getRegNumber().equals(regNumber)) { // т.к. String, то getRegNumber().equals(regNumber)
                 return cars[i];
             }
         }
@@ -65,7 +67,7 @@ public class GarageImpl implements Garage {
     }
 
     @Override
-    public Car[] findcarsByColor(String color) {
+    public Car[] findCarsByColor(String color) {
         return findCarsByPredicate(car -> car.getColor().equals(color));
     }
 
@@ -81,48 +83,76 @@ public class GarageImpl implements Garage {
         }
     }
 
+//    @Override
+//    public Car[] printAllCarsSortedByColor() {
+//        Comparator<Car> comparatorByColor = new Comparator<Car>() {
+//            @Override
+//            public int compare(Car color1, Car color2) {
+//                return color1.getColor().compareTo(color2.getColor());
+//            }
+//        };
+//        Arrays.sort(cars,comparatorByColor);
+//        return cars;
+//    }
+
+
+    @Override
+    public void sortCarsByModel(Car[] cars) {
+//        Comparator<Car> comparatorCarByModel = new Comparator<Car>() {
+//            @Override
+//            public int compare(Car m1, Car m2) {
+//                return m1.getModel().compareTo(m2.getModel());
+//            }
+//        };
+//        Arrays.sort(cars,comparatorCarByModel);
+//        Arrays.sort(cars,(m1,m2) -> m1.getModel().compareTo(m2.getModel()));
+         Arrays.sort(cars);
+    }
+
+    @Override
+    public void sortCarsByColor(Car[] cars) {
+        Arrays.sort(cars,(c1,c2) -> c1.getColor().compareTo(c2.getColor()));
+    }
+
     @Override
     public Car[] printAllCarsSortedByColor() {
-        Comparator<Car> comparatorByColor = new Comparator<Car>() {
-            @Override
-            public int compare(Car color1, Car color2) {
-                return color1.getColor().compareTo(color2.getColor());
-            }
-        };
-        return null;
+
+        sortCarsByColor(cars);
+        for (Car car : cars) {
+            System.out.println(car);
+        }
+        return cars;
     }
 
     @Override
-    public void sortCarByBrand() {
-
+    public void sortCarsByCompany(Car[] cars) {
+        Arrays.sort(cars,(co1,co2) -> co1.getCompany().compareTo(co2.getCompany()));
     }
 
-    @Override
-    public void sortCarByColor() {
-
-    }
-
-    @Override
-    public void sortCarByPrice() {
-
-    }
 
     // в этот метод передаем логическое выражение, которое будет тестировать объекты типа Car
-    private Car[]findCarsByPredicate(Predicate<Car> predicate){
-        int count = 0;
-        for (int i = 0; i < size; i++) {
-            if(predicate.test(cars[i])){ // объект проходит тест
-                count++; // тут лежит размер будущего массива
-            }
-        }
+    private Car[] findCarsByPredicate(Predicate<Car> predicate) {
+//        int count = 0;
+//        for (int i = 0; i < size; i++) {
+//            if(predicate.test(cars[i])){ // объект проходит тест
+//                count++; // тут лежит размер будущего массива
+//            }
+//        }
         // читаем массив и перекладываем результаты в новый
-       Car[]res = new Car[count];
-        for (int i = 0, j = 0 ; j < res.length; i++) {
-            if(predicate.test(cars[i])){
+        Car[] res = new Car[size];
+//        for (int i = 0, j = 0 ; j < res.length; i++) {
+//            if(predicate.test(cars[i])){
+//                res[j++] = cars[i];
+//            }
+//        }
+//        return res;
+        int j = 0;
+        for (int i = 0; i < size; i++) {
+            if (predicate.test(cars[i])) {
                 res[j++] = cars[i];
             }
         }
-        return res;
+        return Arrays.copyOf(res, j);
     }
 
 } // end of class

@@ -1,8 +1,10 @@
 package homework_32.car_garage.ait.cars.model;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Objects;
 
-public class Car {
+public class Car implements Comparable<Car> {
 
     private String regNumber;
     private String model;
@@ -72,4 +74,8 @@ public class Car {
         return Objects.hashCode(regNumber);
     }
 
+    @Override
+    public int compareTo(Car car) {
+        return this.getModel().compareTo(car.getModel());
+    }
 } // end of class
