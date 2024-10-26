@@ -101,12 +101,11 @@ class GarageImplTest {
     @Test
     void testPrintAllCarsSortedByColor() {
         Car[] expected = { cars[1], cars[3], cars[0], cars[2] };
-        garage.printAllCarsSortedByColor();
-
-        assertArrayEquals(expected,cars);
-        System.out.println("Actual array length: " + cars.length);
+        Car[] actual = garage.printAllCarsSortedByColor();
+       assertArrayEquals(expected,actual);
+        System.out.println("Actual array length: " + actual.length);
         System.out.println("Expected array length: " + expected.length);
-        System.out.println(Arrays.toString(cars));
+        System.out.println(Arrays.toString(actual));
     }
 
     @Test

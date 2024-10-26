@@ -116,12 +116,12 @@ public class GarageImpl implements Garage {
 
     @Override
     public Car[] printAllCarsSortedByColor() {
-
-        sortCarsByColor(cars);
-        for (Car car : cars) {
+        Car[] sortedCars = Arrays.copyOf(cars, size); // копируем только заполненные элементы
+        sortCarsByColor(sortedCars); // сортируем по цвету
+        for (Car car : sortedCars) {
             System.out.println(car);
         }
-        return cars;
+        return sortedCars;
     }
 
     @Override
