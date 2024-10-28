@@ -45,5 +45,5 @@ public class CoffeeAppl {
             }
         }
 
-    } // end of method
+    } // end of main
 } // end of class
