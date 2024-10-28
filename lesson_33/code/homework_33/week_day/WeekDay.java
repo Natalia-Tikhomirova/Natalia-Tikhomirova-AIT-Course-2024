@@ -46,7 +46,7 @@ public enum WeekDay {
     public WeekDay plusDay(int quantity){
         int index = this.ordinal() + quantity; // Получаем текущий индекс + количество дней
         WeekDay[] weekDays = WeekDay.values(); // Получаем массив всех дней недели
-        int res = index % weekDays.length;     // Используем остаток от деления, чтобы "закольцевать" неделю
+        int res = index % weekDays.length;
 
         return weekDays[res];                  // Возвращаем день недели по вычисленному индексу
     }
