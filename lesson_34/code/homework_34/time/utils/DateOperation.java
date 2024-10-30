@@ -24,7 +24,8 @@ public class DateOperation {
         // Вычисляем и возвращаем возраст
         int res = (int) ChronoUnit.YEARS.between(birthday, LocalDate.now());
         return res;
-    }
+
+    } // end of method
 
 
     public static String[] sortStringDates(String[] dates) {
@@ -64,8 +65,8 @@ public class DateOperation {
         }
 
         return sortedDates;
-    }
 
+    } // end of method
 } // end of class
 
 
