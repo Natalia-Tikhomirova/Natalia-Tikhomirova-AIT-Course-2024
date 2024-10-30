@@ -1,10 +1,10 @@
 package homework_34.time.utils;
 
 import java.time.LocalDate;
-import java.time.Period;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
-import java.util.regex.Pattern;
+
 
 public class DateOperation {
 
@@ -22,13 +22,10 @@ public class DateOperation {
         LocalDate birthday = LocalDate.parse(birthDate, formatter);
 
         // Вычисляем и возвращаем возраст
-        int res = Period.between(birthday, LocalDate.now()).getYears();
+        int res = (int) ChronoUnit.YEARS.between(birthday, LocalDate.now());
         return res;
     }
 
-    // Регулярные выражения для проверки форматов
-    private static final Pattern ISO_PATTERN = Pattern.compile("\\d{4}-\\d{2}-\\d{2}");
-    private static final Pattern EU_PATTERN = Pattern.compile("\\d{2}/\\d{2}/\\d{4}");
 
     public static String[] sortStringDates(String[] dates) {
         // TODO Homework
@@ -40,26 +37,25 @@ public class DateOperation {
         DateTimeFormatter isoFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         DateTimeFormatter euFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-
         // Парсинг строк с датами и сохранение оригинальной строки
         for (int i = 0; i < dates.length; i++) {
-            LocalDate date = parseDateIfValid(dates[i], isoFormatter, euFormatter);
-            localDatesWithOriginals[i] = new LocalDateWithOriginal(date, dates[i]);
+            String dateStr = dates[i];
+            LocalDate date = null;
+
+            // Проверка соответствия формату ISO (ГГГГ-ММ-ДД) и парсинг
+            if (dateStr.matches("\\d{4}-\\d{2}-\\d{2}")) {
+                date = LocalDate.parse(dateStr, isoFormatter); // Парсим дату
+            }
+            // Проверка соответствия формату EU (ДД/ММ/ГГГГ) и парсинг
+            else if (dateStr.matches("\\d{2}/\\d{2}/\\d{4}")) {
+                date = LocalDate.parse(dateStr, euFormatter); // Парсим дату
+            }
+
+            localDatesWithOriginals[i] = new LocalDateWithOriginal(date, dateStr);
         }
 
         // Сортировка массива по полю LocalDate
-        Arrays.sort(localDatesWithOriginals, (d1, d2) -> {
-            if (d1.getDate() == null) return 1;  // null в конец
-            if (d2.getDate() == null) return -1; // null в конец
-            return d1.getDate().compareTo(d2.getDate()); // Сравнение не-null дат
-        });
-
-        // Проверка результатов сортировки
-        System.out.println("Отсортированные даты LocalDate с оригинальными форматами:");
-        for (LocalDateWithOriginal localDateWithOriginal : localDatesWithOriginals) {
-            System.out.println("Date: " + localDateWithOriginal.getDate() +
-                    " | Original: " + localDateWithOriginal.getOriginalDateStr());
-        }
+        Arrays.sort(localDatesWithOriginals, (d1, d2) -> d1.getDate().compareTo(d2.getDate()));
 
         // Массив отсортированных строк с оригинальными форматами
         String[] sortedDates = new String[dates.length];
@@ -68,21 +64,6 @@ public class DateOperation {
         }
 
         return sortedDates;
-    }
-
-    // Метод для проверки и парсинга даты
-    private static LocalDate parseDateIfValid(String dateStr, DateTimeFormatter isoFormatter, DateTimeFormatter euFormatter) {
-        // Проверка соответствия формату ISO (ГГГГ-ММ-ДД)
-        if (ISO_PATTERN.matcher(dateStr).matches()) {
-            return LocalDate.parse(dateStr, isoFormatter); // Парсим дату
-        }
-
-        // Проверка соответствия формату EU (ДД/ММ/ГГГГ)
-        if (EU_PATTERN.matcher(dateStr).matches()) {
-            return LocalDate.parse(dateStr, euFormatter); // Парсим дату
-        }
-
-        return null; // Если ни один формат не подошел, возвращаем null
     }
 
 } // end of class

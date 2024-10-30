@@ -7,13 +7,13 @@ public class LocalDateWithOriginal {
     private LocalDate date;
     private String originalDateStr;
 
-    // Конструктор
+
     public LocalDateWithOriginal(LocalDate date, String originalDateStr) {
         this.date = date;
         this.originalDateStr = originalDateStr;
     }
 
-    // Геттеры для даты и оригинальной строки
+
     public LocalDate getDate() {
         return date;
     }
