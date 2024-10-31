@@ -32,12 +32,7 @@ public class EventCalendarImpl implements EventCalendar {
 
     @Override
     public Event getEventInCalendar(int eventId) {
-        for (int i = 0; i < size(); i++) {
-            if(events[i].){
-                return events[i];
-            }
 
-        }
         return null;
     }
 

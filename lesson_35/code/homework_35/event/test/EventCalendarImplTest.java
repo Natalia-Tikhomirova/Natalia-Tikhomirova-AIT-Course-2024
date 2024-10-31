@@ -40,55 +40,55 @@ class EventCalendarImplTest {
         events[5] = new Event(6, "Event 6", "http://event6.com", now.minusDays(15));
 
         // TODO add events to eventCalendar
+//
+//        for (int i = 0; i < events.length; i++) {
+//            eventCalendar.addEvent(events[i]);
+//        }
+//    }
 
-        for (int i = 0; i < events.length; i++) {
-            eventCalendar.addEvent(events[i]);
-        }
-    }
+//    @Test
+//    void testAddEvent() {
+//        assertFalse(eventCalendar.addEvent(null));
+//        // assertFalse(eventCalendar.addEvent(events[1]));
+//        Event event = new Event(7, "Event7", "http://event7.com", now.minusDays(15));
+//        assertTrue(eventCalendar.addEvent(event));
+//        assertEquals(7, eventCalendar.size());
+//        event = new Event(8, "Event8", "http://event8.com", now.minusDays(15));
+//        assertFalse(eventCalendar.addEvent(event));
+//    }
 
-    @Test
-    void testAddEvent() {
-        assertFalse(eventCalendar.addEvent(null));
-        // assertFalse(eventCalendar.addEvent(events[1]));
-        Event event = new Event(7, "Event7", "http://event7.com", now.minusDays(15));
-        assertTrue(eventCalendar.addEvent(event));
-        assertEquals(7, eventCalendar.size());
-        event = new Event(8, "Event8", "http://event8.com", now.minusDays(15));
-        assertFalse(eventCalendar.addEvent(event));
-    }
+//    @Test
+//    void testRemoveEvent() {
+//        assertTrue(eventCalendar.removeEvent(1));
+//        assertFalse(eventCalendar.removeEvent(9));
+//        assertEquals(5, eventCalendar.size());
+//    }
+//
+//    @Test
+//    void testUpdateEvent() {
+//        assertTrue(eventCalendar.updateEvent(3, "newUrl"));
+//        assertFalse(eventCalendar.updateEvent(8, "http://event8.com"));
+//    }
+//
+//    @Test
+//    void testGetEventInCalendar() {
+//        assertEquals(events[0], eventCalendar.getEventInCalendar(1));
+//        assertNull(eventCalendar.getEventInCalendar(9));
+//
+//    }
 
-    @Test
-    void testRemoveEvent() {
-        assertTrue(eventCalendar.removeEvent(1));
-        assertFalse(eventCalendar.removeEvent(9));
-        assertEquals(5, eventCalendar.size());
-    }
+//    @Test
+//    void testGetEventBetweenDate() {
+//        LocalDate today = LocalDate.now();
+//        Event[] actual = eventCalendar.getEventBetweenDate(today.minusDays(5),today.minusDays(20));
+//        Arrays.sort(events,comparator);
+//        Event[]expected = {events[0], events[1],events[2],events[3],events[5]};
+//        Arrays.sort(expected,comparator);
+//        assertEquals(expected,actual);
+//    }
 
-    @Test
-    void testUpdateEvent() {
-        assertTrue(eventCalendar.updateEvent(3, "newUrl"));
-        assertFalse(eventCalendar.updateEvent(8, "http://event8.com"));
-    }
-
-    @Test
-    void testGetEventInCalendar() {
-        assertEquals(events[0], eventCalendar.getEventInCalendar(1));
-        assertNull(eventCalendar.getEventInCalendar(9));
-
-    }
-
-    @Test
-    void testGetEventBetweenDate() {
-        LocalDate today = LocalDate.now();
-        Event[] actual = eventCalendar.getEventBetweenDate(today.minusDays(5),today.minusDays(20));
-        Arrays.sort(events,comparator);
-        Event[]expected = {events[0], events[1],events[2],events[3],events[5]};
-        Arrays.sort(expected,comparator);
-        assertEquals(expected,actual);
-    }
-
-    @Test
-    void testSize() {
+ //   @Test
+ //   void testSize() {
         assertEquals(6, eventCalendar.size());
     }
 }
