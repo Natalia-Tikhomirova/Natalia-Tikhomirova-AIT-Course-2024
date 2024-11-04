@@ -7,9 +7,7 @@ package homework_38.model;
 
 import classwork_38.linked_list_test.LinkedListAppl;
 
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.*;
 
 public class GermanyAppl {
     public static void main(String[] args) {
@@ -71,6 +69,21 @@ public class GermanyAppl {
         germanStateCapitals.add("Hamburg");
         System.out.println(germanStateCapitals);
         System.out.println();
+        System.out.println("-----------------------------------------------------------------");
+
+        // Отсортировать список по алфавиту.
+
+        Collections.sort(germanStateCapitals);
+        System.out.println("Sorted citys: " + germanStateCapitals);
+        System.out.println("-----------------------------------------------------------------");
+
+        // и в обратном порядке.
+
+        Collections.sort(germanStateCapitals,Collections.reverseOrder());
+        System.out.println("Sorted citys: " + germanStateCapitals);
+
+
+
 
 
 
