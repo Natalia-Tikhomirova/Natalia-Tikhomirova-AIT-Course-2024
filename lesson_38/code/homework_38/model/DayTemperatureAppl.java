@@ -19,23 +19,23 @@ public class DayTemperatureAppl {
 
         ArrayList<DayTemperature> temperaturesOct = new ArrayList<DayTemperature>();
 
-        temperaturesOct.add(new DayTemperature(LocalDate.of(2024,10,25), 14.2));
-        temperaturesOct.add(new DayTemperature(LocalDate.of(2024,10,26), 13));
-        temperaturesOct.add(new DayTemperature(LocalDate.of(2024,10,27), 20));
-        temperaturesOct.add(new DayTemperature(LocalDate.of(2024,10,28), 17.6));
-        temperaturesOct.add(new DayTemperature(LocalDate.of(2024,10,29), 15));
-        temperaturesOct.add(new DayTemperature(LocalDate.of(2024,10,30), 12.8));
-        temperaturesOct.add(new DayTemperature(LocalDate.of(2024,10,31), 14.2));
+        temperaturesOct.add(new DayTemperature(LocalDate.of(2024, 10, 25), 14.2));
+        temperaturesOct.add(new DayTemperature(LocalDate.of(2024, 10, 26), 13));
+        temperaturesOct.add(new DayTemperature(LocalDate.of(2024, 10, 27), 20));
+        temperaturesOct.add(new DayTemperature(LocalDate.of(2024, 10, 28), 17.6));
+        temperaturesOct.add(new DayTemperature(LocalDate.of(2024, 10, 29), 15));
+        temperaturesOct.add(new DayTemperature(LocalDate.of(2024, 10, 30), 12.8));
+        temperaturesOct.add(new DayTemperature(LocalDate.of(2024, 10, 31), 14.2));
 
         ArrayList<DayTemperature> temperaturesNov = new ArrayList<>();
 
-        temperaturesNov.add(new DayTemperature(LocalDate.of(2024,11,1), 11.6));
-        temperaturesNov.add(new DayTemperature(LocalDate.of(2024,11,2), 12));
-        temperaturesNov.add(new DayTemperature(LocalDate.of(2024,11,3), 9));
-        temperaturesNov.add(new DayTemperature(LocalDate.of(2024,11,4), 14.8));
-        temperaturesNov.add(new DayTemperature(LocalDate.of(2024,11,5), 13.1));
-        temperaturesNov.add(new DayTemperature(LocalDate.of(2024,11,6), 8));
-        temperaturesNov.add(new DayTemperature(LocalDate.of(2024,11,7), 9.5));
+        temperaturesNov.add(new DayTemperature(LocalDate.of(2024, 11, 1), 11.6));
+        temperaturesNov.add(new DayTemperature(LocalDate.of(2024, 11, 2), 12));
+        temperaturesNov.add(new DayTemperature(LocalDate.of(2024, 11, 3), 9));
+        temperaturesNov.add(new DayTemperature(LocalDate.of(2024, 11, 4), 14.8));
+        temperaturesNov.add(new DayTemperature(LocalDate.of(2024, 11, 5), 13.1));
+        temperaturesNov.add(new DayTemperature(LocalDate.of(2024, 11, 6), 8));
+        temperaturesNov.add(new DayTemperature(LocalDate.of(2024, 11, 7), 9.5));
 
         // Merging list
 
@@ -69,6 +69,6 @@ public class DayTemperatureAppl {
             totalTemperature += dayTemperature.getTemperature();
             count++;
         }
-        System.out.println("Average temperature: " + (double)totalTemperature / count + " C");
+        System.out.println("Average temperature: " + (double) totalTemperature / count + " C");
     } // end of method
 } // end of class
