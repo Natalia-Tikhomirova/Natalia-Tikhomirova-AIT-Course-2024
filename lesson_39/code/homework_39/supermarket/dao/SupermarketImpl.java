@@ -7,6 +7,7 @@ import java.util.Collection;
 
 public class SupermarketImpl implements Supermarket {
 
+
     private Collection<Product>products = new ArrayList<>();
 
     public SupermarketImpl(Collection<Product> products) {
