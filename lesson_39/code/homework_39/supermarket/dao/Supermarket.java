@@ -2,7 +2,7 @@ package homework_39.supermarket.dao;
 
 import homework_39.supermarket.model.Product;
 
-public interface Supermarket {
+public interface Supermarket extends Iterable<Product>{
 
     boolean addProduct(Product product);
 

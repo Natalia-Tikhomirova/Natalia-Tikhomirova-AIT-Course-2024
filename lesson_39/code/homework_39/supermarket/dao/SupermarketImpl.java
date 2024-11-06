@@ -1,9 +1,11 @@
 package homework_39.supermarket.dao;
 
 import homework_39.supermarket.model.Product;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class SupermarketImpl implements Supermarket {
 
@@ -47,5 +49,10 @@ public class SupermarketImpl implements Supermarket {
     @Override
     public int skuQuantity() {
         return 0;
+    }
+
+    @Override
+    public @NotNull Iterator<Product> iterator() {
+        return null;
     }
 } // end of class
