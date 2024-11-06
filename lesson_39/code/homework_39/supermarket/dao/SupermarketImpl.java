@@ -2,11 +2,12 @@ package homework_39.supermarket.dao;
 
 import homework_39.supermarket.model.Product;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 public class SupermarketImpl implements Supermarket {
 
-    private Collection<Product>products;
+    private Collection<Product>products = new ArrayList<>();
 
     public SupermarketImpl(Collection<Product> products) {
         this.products = products;
