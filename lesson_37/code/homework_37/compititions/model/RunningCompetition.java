@@ -74,7 +74,6 @@ public class RunningCompetition {
             position++;
         }
     } // end of method
-
 } // end of class
 
 
