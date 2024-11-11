@@ -5,8 +5,10 @@ package classwork_43.stream_primitives;
 //- получение простейших статистических данных с помощью summaryStatistics
 //- моделирование лотереи 6 из 49
 
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class PrimitiveStreamExample {
@@ -30,6 +32,28 @@ public class PrimitiveStreamExample {
                 .sum();
         System.out.println("Sum = " + sum);
 
+        System.out.println("_____________SummaryStatistics__________________");
+        IntSummaryStatistics intSummaryStatistics = getRandomNumbers(MIN,MAX,N_NUMBERS)
+                .mapToInt(Integer::intValue)
+                .summaryStatistics();
+
+        System.out.println("Min value: " + intSummaryStatistics.getMin());
+        System.out.println("Max value: " + intSummaryStatistics.getMax());
+        System.out.println("Average value: " + intSummaryStatistics.getAverage());
+        System.out.println("Count: " + intSummaryStatistics.getCount());
+        System.out.println("Sum: " + intSummaryStatistics.getSum());
+
+        System.out.println("______________моделирование лотереи 6 из 49____________");
+
+        List<Integer> lotteryNumbers = getRandomNumbers(1, 50, 6)
+                .distinct()
+                .limit(6)
+                .collect(Collectors.toList());
+
+        lotteryNumbers.forEach(System.out::println);
+
+
+
     }
 
     private static Stream<Integer> getRandomNumbers(int min, int max, int nNumbers) {
@@ -39,6 +63,8 @@ public class PrimitiveStreamExample {
                 .boxed();
 
     }
+
+    // Методы .ints(), .doubles(), и аналогичные в классе java.util.Random используются для генерации потоков случайных чисел различных типов, таких как int, double, и long. Эти методы полезны для получения последовательностей случайных чисел, которые можно обработать как потоки (Stream), что особенно удобно для работы с большими наборами данных.
 
 
 

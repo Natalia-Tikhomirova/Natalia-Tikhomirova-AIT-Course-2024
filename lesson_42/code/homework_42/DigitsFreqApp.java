@@ -2,9 +2,7 @@ package homework_42;
 
 // сгенерировать один миллион положительных целых чисел в интервале от 100 до 1000, и подсчитать частоту встречаемости цифр в этих числах.
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 public class DigitsFreqApp {
     public static void main(String[] args) {
@@ -26,7 +24,7 @@ public class DigitsFreqApp {
 
             while (number > 0){
                 int digit = number % 10;
-                digitFreg.put(digit,digitFreg.get(digit) +1);
+                digitFreg.put(digit,digitFreg.getOrDefault(digit,0) +1);
                 number /=10;
             }
         }
@@ -35,7 +33,5 @@ public class DigitsFreqApp {
             System.out.printf("Цифра %d: %d раз%n", entry.getKey(), entry.getValue());
         }
     }
-
-
 } // end of class
 
