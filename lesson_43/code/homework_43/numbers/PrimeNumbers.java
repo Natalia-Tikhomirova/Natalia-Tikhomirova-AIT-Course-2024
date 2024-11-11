@@ -4,6 +4,7 @@ package homework_43.numbers;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class PrimeNumbers {
     public static void main(String[] args) {
@@ -16,16 +17,10 @@ public class PrimeNumbers {
     }
 
     private static boolean isPrime(int number) {
-
-        if (number <= 1) {
-            return false;                      // 1 и меньше не являются простыми
+        if(number <= 1 ){
+            return false;
         }
-        for (int div = 2; div < number; div++) {
-            if (number % div == 0) {
-                return false;                  // Число делится на div, значит, оно не простое
-            }
-        }
-        return true;                           // Число простое
+        return IntStream.range(2,number)
+                .noneMatch(div -> number % div == 0);
     }
-
 } // end of class
