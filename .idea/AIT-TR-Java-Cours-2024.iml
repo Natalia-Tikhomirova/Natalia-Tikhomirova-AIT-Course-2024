@@ -31,6 +31,25 @@
       <sourceFolder url="file://$MODULE_DIR$/lesson_25/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lesson_26/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lesson_27/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_28/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_29/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_30/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_31/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/others/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_32/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_33/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_34/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_35/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_36/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_37/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_38/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_39/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_40/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_41/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_42/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_43/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_44/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_45/code" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -61,6 +80,15 @@
           <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-params/5.8.1/junit-jupiter-params-5.8.1.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.8.1/junit-jupiter-engine-5.8.1.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.8.1/junit-platform-engine-1.8.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/24.0.0/annotations-24.0.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

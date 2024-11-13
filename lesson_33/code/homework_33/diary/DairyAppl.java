@@ -1,6 +1,5 @@
 package homework_33.diary;
-
-//  // Реализовать метод printMenu().
+// Реализовать метод printMenu().
 
 import homework_33.week_day.WeekDay;
 
