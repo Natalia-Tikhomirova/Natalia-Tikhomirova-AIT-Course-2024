@@ -74,7 +74,6 @@ public class ComputerImpl {
         computers.stream()
                 .forEach(System.out::println);
     }
-
 } // end of class
 
 

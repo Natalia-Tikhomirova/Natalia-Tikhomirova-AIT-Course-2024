@@ -24,7 +24,6 @@ public class BookAppl {
         printBooksWithPriceMoreThan(books,price);
 
         //отобразить книги, чей год выпуска находится в заданном диапазоне
-
         int yearFrom = 1860;
         int yearTo = 2000;
         System.out.println("=================Books form year " + yearFrom + " to year " + yearTo + "================");

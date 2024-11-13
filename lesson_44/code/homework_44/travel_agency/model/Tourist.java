@@ -19,7 +19,6 @@ public class Tourist {
     public List<String> getCountries() {
         return countries;
     }
-
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Tourist{");

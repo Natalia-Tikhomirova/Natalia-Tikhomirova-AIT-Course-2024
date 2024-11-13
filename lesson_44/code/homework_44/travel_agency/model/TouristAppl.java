@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 public class TouristAppl {
     public static void main(String[] args) {
 
+
         // data set
         System.out.println("=========================List of tourists============================");
         List<Tourist> tourists = getTourists();
