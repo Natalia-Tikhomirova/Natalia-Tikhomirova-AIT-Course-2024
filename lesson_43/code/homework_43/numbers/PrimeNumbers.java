@@ -9,6 +9,8 @@ import java.util.stream.IntStream;
 public class PrimeNumbers {
     public static void main(String[] args) {
 
+        // Stream<Integer> primeNumbers = Stream.of(10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20).filter(n -> isPrime(n));
+
         List<Integer> numbers = Arrays.asList(10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
         List<Integer> primeNumbers = numbers.stream()
                 .filter(PrimeNumbers::isPrime)
