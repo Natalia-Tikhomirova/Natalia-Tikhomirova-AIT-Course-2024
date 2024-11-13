@@ -14,4 +14,4 @@ public interface Report {
 
     // число: список программистов
     Map <Long, List<Programmer>> sortedMapFrequency(List<Programmer> programmers);
-}
+} // end of class

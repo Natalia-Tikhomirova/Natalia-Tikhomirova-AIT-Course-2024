@@ -19,7 +19,6 @@ public class Programmer {
     public List<String> getTechnology() {
         return technology;
     }
-
     @Override
     public String toString() {
         return "Programmer: " + nickName + ", technology" + technology.toString();

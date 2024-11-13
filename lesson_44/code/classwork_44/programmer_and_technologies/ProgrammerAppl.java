@@ -78,7 +78,6 @@ public class ProgrammerAppl {
                 .forEach(entry -> System.out.printf("Технология: %s, Частота: %d%n", entry.getKey(), entry.getValue()));
     }
 
-
     private static void printTechnologies(List<Programmer> programmers) {
         List<String> technologies = programmers.stream()
                 .map(Programmer::getTechnology) // взяли списки с языками
