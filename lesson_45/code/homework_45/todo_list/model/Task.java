@@ -55,11 +55,8 @@ public class Task implements Serializable {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Task{");
-        sb.append("title='").append(title).append('\'');
-        sb.append(", description='").append(description).append('\'');
-        sb.append(", date=").append(date);
+        sb.append("date=").append(date);
         sb.append('}');
         return sb.toString();
     }
-
 } // end of class
