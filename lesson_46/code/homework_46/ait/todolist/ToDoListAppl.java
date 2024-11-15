@@ -19,6 +19,7 @@ public class ToDoListAppl implements Serializable{
         ToDoList toDoList = new ToDoListImpl();
         Scanner scanner = new Scanner(System.in);
 
+
         // начало цикла
         while (true) {
             // print menu
@@ -26,12 +27,10 @@ public class ToDoListAppl implements Serializable{
             // ask choice
             System.out.print("Введите ваш выбор: ");
             // Проверка на корректный ввод числа (потому что сама вляпалась, введя буквы)))
-            if (!scanner.hasNextInt()) {
+            while (!scanner.hasNextInt()) {
                 System.out.println("Ошибка: введите целое число для выбора.");
                 scanner.next(); // пропустить некорректный ввод
-                continue;
             }
-
             int choice = scanner.nextInt();
             scanner.nextLine(); // считываем перевод строк
 
