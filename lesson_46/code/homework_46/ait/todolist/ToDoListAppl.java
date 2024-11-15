@@ -26,7 +26,7 @@ public class ToDoListAppl implements Serializable{
             Menu.printMenu(); // статический метод вызывается по имени класса
             // ask choice
             System.out.print("Введите ваш выбор: ");
-            // Проверка на корректный ввод числа (потому что сама вляпалась, введя буквы)))
+            // Проверка на корректный ввод числа
             while (!scanner.hasNextInt()) {
                 System.out.println("Ошибка: введите целое число для выбора.");
                 scanner.next(); // пропустить некорректный ввод
