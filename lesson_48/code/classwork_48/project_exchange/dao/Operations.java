@@ -26,4 +26,6 @@ public interface Operations {
     double calcMarge(double sum);
 
     void printTrans();
-}
+
+} // end of class
+

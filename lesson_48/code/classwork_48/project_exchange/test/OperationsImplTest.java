@@ -45,4 +45,4 @@ class OperationsImplTest {
     @Test
     void calcMarge() {
     }
-}
+} // end of class

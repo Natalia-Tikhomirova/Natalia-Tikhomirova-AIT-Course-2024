@@ -77,4 +77,5 @@ public class CurrencyExchangeAppl {
         }
         System.out.println("\n------------------------------------------------------------------------");
     }
-}
+} // end of class
+
